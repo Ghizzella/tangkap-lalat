@@ -48,6 +48,44 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+		const preventZoom = (e) => {
+			if (e.touches.length > 1) e.preventDefault();
+		};
+
+		let lastTouchEnd = 0;
+		const preventDoubleTapZoom = (e) => {
+			const now = Date.now();
+			if (now - lastTouchEnd <= 300) e.preventDefault();
+			lastTouchEnd = now;
+		};
+
+		const preventWheelZoom = (e) => {
+			if (e.ctrlKey) e.preventDefault();
+		};
+
+		const preventKeyboardZoom = (e) => {
+			if (
+				(e.ctrlKey || e.metaKey) &&
+				(e.key === "+" || e.key === "-" || e.key === "=")
+			) {
+				e.preventDefault();
+			}
+		};
+
+		document.addEventListener("touchstart", preventZoom, { passive: false });
+		document.addEventListener("touchend", preventDoubleTapZoom);
+		window.addEventListener("wheel", preventWheelZoom, { passive: false });
+		window.addEventListener("keydown", preventKeyboardZoom);
+
+		return () => {
+			document.removeEventListener("touchstart", preventZoom);
+			document.removeEventListener("touchend", preventDoubleTapZoom);
+			window.removeEventListener("wheel", preventWheelZoom);
+			window.removeEventListener("keydown", preventKeyboardZoom);
+		};
+	}, []);
+
   return (
     <Router>
       <Routes>

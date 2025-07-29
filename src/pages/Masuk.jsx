@@ -30,24 +30,24 @@ function Masuk() {
           <img
             src={papan}
             alt="Papan"
-            className="w-[400px] md:w-[500px] lg:w-[700px]"
+            className="w-[400px] md:w-[500px]"
           />
           <p className="absolute inset-0 flex items-center justify-center pt-2 sm:pt-4 text-white 
-            text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-chewy drop-shadow-md sm:drop-shadow-lg">
+            text-2xl sm:text-4xl md:text-5xl font-chewy drop-shadow-md sm:drop-shadow-lg">
             Tangkap Lalat
           </p>
         </div>
       </div>
 
       {/* 🔐 Tombol Sign In & Sign Up */}
-      <div className="flex flex-col items-center justify-center mt-16 sm:mt-20 md:mt-24 lg:mt-24 space-y-10 sm:space-y-12 md:space-y-16">
+      <div className="flex flex-col items-center justify-center mt-16 sm:mt-20 md:mt-24 lg:mt-20 space-y-10 sm:space-y-12 md:space-y-16 lg:space-y-10">
 
         {/* ▶️ Sign In */}
         <div className="relative cursor-pointer" onClick={handleSignIn}>
           <img
             src={tombol}
             alt="Tombol"
-            className="w-[380px] h-[130px]"
+            className="w-[380px] h-[130px] lg:w-[300px] lg:h-[100px]"
           />
           <p className="absolute inset-0 flex items-center justify-center text-white text-4xl uppercase font-chewy drop-shadow-md sm:drop-shadow-lg">
             Sign In
@@ -59,7 +59,7 @@ function Masuk() {
           <img
             src={tombol}
             alt="Tombol"
-            className="w-[380px] h-[130px]"
+            className="w-[380px] h-[130px] lg:w-[300px] lg:h-[100px]"
           />
           <p className="absolute inset-0 flex items-center justify-center text-white text-4xl uppercase font-chewy drop-shadow-md sm:drop-shadow-lg">
             Sign Up

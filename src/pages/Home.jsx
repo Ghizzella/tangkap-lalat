@@ -23,15 +23,15 @@ function Home() {
       <div className="absolute top-32 sm:top-24 md:top-16 left-1/2 transform -translate-x-1/2">
         <div className="relative">
           <img
-  src={papan}
-  alt="Papan"
-  className="
+            src={papan}
+            alt="Papan"
+            className="
     w-[400px]       // 📱 lebih besar di mobile
     sm:w-[440px]
     md:w-[480px]
     lg:w-[520px]
   "
-/>
+          />
 
           <p className="absolute inset-0 flex items-center justify-center pt-3 
             text-white text-2xl sm:text-3xl md:text-5xl font-chewy drop-shadow-md sm:drop-shadow-lg">

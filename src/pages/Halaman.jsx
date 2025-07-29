@@ -51,14 +51,10 @@ function Halaman() {
 
 
       {/* 🪧 Judul Papan */}
-      <div className="flex items-center justify-center mt-20">
+      <div className="flex items-center justify-center mt-14">
         <div className="relative">
-          <img
-            src={papan}
-            alt="Papan"
-            className="w-[400px] md:w-[500px] lg:w-[550px]"
-          />
-          <p className="absolute inset-0 flex items-center justify-center pt-4 text-white text-3xl sm:text-5xl font-chewy" style={{ textShadow: '2px 2px 3px black' }}>
+          <img src={papan} alt="Papan" className="w-[300px] md:w-[375px]" />
+          <p className="absolute inset-0 flex items-center justify-center pt-2 sm:pt-4 text-white text-2xl sm:text-4xl font-chewy drop-shadow-md sm:drop-shadow-lg">
             Tangkap Lalat
           </p>
         </div>

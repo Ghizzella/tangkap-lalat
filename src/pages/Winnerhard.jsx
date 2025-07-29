@@ -35,14 +35,16 @@ function WinnerHard() {
   }, []);
 
   const filteredLeaderboard = leaderboard.filter(item => item.nama !== "__admin__");
+  // Ambil 5 teratas dari leaderboard yang sudah difilter
+  const topFiveLeaderboard = filteredLeaderboard.slice(0, 5);
 
   return (
     <div className="app-container min-h-screen w-full font-chewy overflow-hidden relative py-10 px-4 sm:px-10">
 
-      <div className="flex justify-center mb-10">
-        <div className="relative">
-          <img src={papan} alt="Papan" className="w-[400px] md:w-[500px] lg:w-[550px]" />
-          <p className="absolute inset-0 flex items-center justify-center pt-6 text-white text-3xl sm:text-5xl md:text-5xl font-chewy drop-shadow-lg">
+      <div className="flex justify-center mb-6">
+        <div className="relative w-full max-w-[70vw] sm:max-w-[500px] lg:w-[375px]">
+          <img src={papan} alt="Papan" className="w-full" />
+          <p className="absolute inset-0 flex items-center justify-center pt-6 text-white text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-chewy drop-shadow-lg">
             Leaderboard Hard
           </p>
         </div>
@@ -59,7 +61,7 @@ function WinnerHard() {
             </tr>
           </thead>
           <tbody>
-            {filteredLeaderboard.map((item, index) => (
+            {topFiveLeaderboard.map((item, index) => (
               <tr key={index} className="text-lg text-gray-700">
                 <td className="py-2">{index + 1}</td>
                 <td className="py-2">{item.nama}</td>

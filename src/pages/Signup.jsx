@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Lock, User, Mail } from 'lucide-react';
-import { papan,} from '../assets';
+import { papan, } from '../assets';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from "../component/firebase";
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore';
@@ -52,25 +52,23 @@ function Signup() {
   };
 
   return (
-    <div className="app-container3 min-h-screen w-full bg-cover bg-center font-chewy font-bold overflow-hidden relative">
-
-
+    <div className="app-container3 min-h-screen w-full bg-cover bg-center font-chewy font-bold overflow-hidden">
       {/* Judul */}
       <div className="flex items-center justify-center mt-1">
         <div className="relative">
-          <img src={papan} alt="Papan" className="w-[400px] md:w-[500px] lg:w-[550px]" />
-          <p className="absolute inset-0 flex items-center justify-center pt-4 text-white text-3xl sm:text-5xl md:text-5xl font-chewy drop-shadow-md sm:drop-shadow-lg">
+          <img src={papan} alt="Papan" className="w-[300px] md:w-[375px]" />
+          <p className="absolute inset-0 flex items-center justify-center pt-2 sm:pt-4 text-white text-2xl sm:text-4xl font-chewy drop-shadow-md sm:drop-shadow-lg">
             Tangkap Lalat
           </p>
         </div>
       </div>
 
       {/* Form Box */}
-<div className="mx-auto mt-24 w-[300px] sm:w-[360px] md:w-[400px] lg:w-[500px] xl:w-[550px] 
-  bg-white/20 backdrop-blur-md rounded-3xl px-6 py-8 lg:py-10 
-  shadow-lg space-y-8 border border-white/30 z-20 relative
-  min-h-[300px] md:min-h-[350px] lg:min-h-[400px]">
-        <h2 className="text-center text-4xl font-extrabold text-brown-700">SIGN IN</h2>
+      <div className="mx-auto mt-24 lg:mt-10 w-[300px] sm:w-[360px] md:w-[400px] lg:w-[500px]
+      bg-white/20 backdrop-blur-md rounded-3xl px-6 py-8 lg:py-6
+      shadow-lg space-y-8 lg:space-y-4 border border-white/30 z-20 relative
+      min-h-[300px] md:min-h-[350px]">
+        <h2 className="text-center text-4xl lg:text-3xl font-extrabold text-brown-700">SIGN UP</h2>
 
         {/* Email */}
         <div className="flex items-center bg-[#fff3d6] rounded-xl px-4 py-3 shadow">
